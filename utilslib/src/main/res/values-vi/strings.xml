@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="high_density_screen">Màn hình độ phân giải cao</string>
+    <string name="general_title_language_english">Tiếng Anh</string>
+    <string name="general_title_language_vietnamese">Tiếng Việt</string>
+    <string name="prefs_theme_key">theme</string>
+    <string name="notification">Thông báo</string>
+    <string name="show_message_back_to_exit">Vui lòng bấm QUAY LẠI lần nữa để thoát</string>
+</resources>

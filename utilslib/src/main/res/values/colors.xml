@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#9BC8CE</color>
+    <color name="colorPrimarylight">#D7ECEF</color>
+
+    <color name="colorAccent">#D7ECEF</color>
+    <color name="colorAccent_80tp">#CCFFFFFF</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorRuler">#DC632A</color>
+    <color name="colorPlaying">#86c9cf</color>
+    <color name="colorBgMenu">#86C9CF</color>
+
+    <color name="colorBorder">#E1E1E6</color>
+    <color name="colorBorder2">#E2e2e2</color>
+    <color name="colorbgattachment">#F8EDE4</color>
+    <color name="colorBorderLight">#EBEBEB</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="borderPrimary">#86c9cf</color>
+
+    <color name="colorGrey1">#f1f1f1</color>
+    <color name="colorGrey2">#f2f2f2</color>
+    <color name="colorGrey3">#E4E4E4</color>
+    <color name="colorGrey4">#7F7F7F</color>
+    <color name="colorGrey5">#f0f0f0</color>
+    <color name="colorGrey6">#EEEEEE</color>
+    <color name="colorGrey7">#878789</color>
+    <color name="colorTextMenu">#505050</color>
+    <color name="bookmarkOrange">#D04519</color>
+    <color name="bookmarkYellow">#FFF835</color>
+    <color name="bookmarkBlue">#0830B1</color>
+
+    <color name="colorBlue1">#1DA1F2</color>
+    <color name="colorBlue2">#0830b1</color>
+    <color name="colorBrown">#721c24</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorPink1">#f8d7da</color>
+    <color name="colorPink2">#f5c6cb</color>
+    <color name="colorYellow">#fff835</color>
+    <color name="fontcolorgray1">#878789</color>
+    <color name="fontcolorgray2">#686E7C</color>
+    <color name="bg_transgray">#4A86C9CF</color>
+
+    <color name="colorfontforget">#1DA1F2</color>
+
+    <!--    controll color-->
+    <color name="background_play">#A5E4EC</color>
+    <color name="background_playerControl">#C8C9CA</color>
+    <color name="backgroundChapterAvatar">#E4E5E6</color>
+    <color name="backgroundheaderTab">#DDDDDE</color>
+    <color name="errorboxColor">#f8d7da</color>
+    <color name="errorboxBorder">#f5c6cb</color>
+
+    <!--    item video list-->
+    <color name="color_item_active">#86C9CF</color>
+    <color name="color_item">#C8C9CA</color>
+
+    <!--    chapter item-->
+    <color name="item_chapter">#EEEEF0</color>
+    <!--    Semantic item color-->
+    <color name="borderSBitem">#707070</color>
+
+    <color name="menu_light_bg">#95C7CE</color>
+    <color name="menu_dark_bg">#83B4BB</color>
+
+    <color name="bg_alphagrey">#A4707070</color>
+    <color name="bg_alphaactive">#A486C9CF</color>
+</resources>

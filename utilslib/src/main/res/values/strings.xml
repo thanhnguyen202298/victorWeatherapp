@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="high_density_screen">high density screen</string>
+    <string name="general_title_language_english">English</string>
+    <string name="general_title_language_vietnamese">Vietnamese</string>
+    <string name="prefs_theme_key">theme</string>
+    <string name="notification">Notification</string>
+
+    <string name="show_message_back_to_exit">Please click BACK again to exit</string>
+
+</resources>
