@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">weather</string>
+
+    <string name="temperature_title">Nhiệt độ trung bình:</string>
+    <string name="date_title">Ngày:</string>
+    <string name="presure_title">Áp suất:</string>
+    <string name="humidity_title">Độ ẩm:</string>
+    <string name="descript_title">Mô tả:</string>
+</resources>

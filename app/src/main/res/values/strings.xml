@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">weather</string>
+    <string name="temperature_title">Average Temperature:</string>
+    <string name="date_title">Date:</string>
+    <string name="presure_title">Presure:</string>
+    <string name="humidity_title">Humidity:</string>
+    <string name="descript_title">Description:</string>
 </resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- font sizes -->
+    <dimen name="font_huger">40sp</dimen>
+    <dimen name="font_huge_large">28sp</dimen>
+    <dimen name="font_big_huge">24sp</dimen>
+    <dimen name="font_huge">22sp</dimen>
+    <dimen name="font_larger">20sp</dimen>
+    <dimen name="font_large15">15sp</dimen>
+    <dimen name="font_large">16sp</dimen>
+    <dimen name="font_large17">17sp</dimen>
+    <dimen name="font_large18">18sp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_tiny">10sp</dimen>
+    <dimen name="font_tiny1">11sp</dimen>
+    <dimen name="font_medium_tiny">9sp</dimen>
+    <dimen name="font_supper_tiny">8sp</dimen>
+    <dimen name="font_supper_small_tiny">6sp</dimen>
+
+    <!-- typical spacing -->
+    <dimen name="spacing_huge">40dp</dimen>
+    <dimen name="spacing_large">32dp</dimen>
+    <dimen name="spacing_normal_large">28dp</dimen>
+    <dimen name="spacing_normal">24dp</dimen>
+    <dimen name="spacing_small">16dp</dimen>
+    <dimen name="spacing_small1">17dp</dimen>
+    <dimen name="spacing_tiny">8dp</dimen>
+    <dimen name="spacing_super_tiny">4dp</dimen>
+    <dimen name="spacing_min2">2dp</dimen>
+    <dimen name="spacing_min4">4dp</dimen>
+
+<!--    item height-->
+    <dimen name="item_height">135dp</dimen>
+    <dimen name="item_icon_width">100dp</dimen>
+</resources>
