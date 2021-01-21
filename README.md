@@ -1,11 +1,11 @@
 # victorWeatherapp
 automous challenge
 # dependencies using: 
-Glide
-Retrofit,
-kotlin Extension,
-Gson, Realm
-backend endpoint: opencagedata.com & openweathermap.org
+- Glide
+- Retrofit,
+- kotlin Extension,
+- Gson, Realm
+- backend endpoint: opencagedata.com & openweathermap.org
 
 # My App Architecture:
 MVVM,
