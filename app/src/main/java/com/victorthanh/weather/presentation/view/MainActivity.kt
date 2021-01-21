@@ -125,7 +125,7 @@ class MainActivity : BaseActivity() {
             savedCityAda?.list = list
             savedCityAda?.notifyDataSetChanged()
         }else {
-            savedCityAda?.list?.clear()
+            savedCityAda?.list= ArrayList()
             savedCityAda?.notifyDataSetChanged()
         }
     }

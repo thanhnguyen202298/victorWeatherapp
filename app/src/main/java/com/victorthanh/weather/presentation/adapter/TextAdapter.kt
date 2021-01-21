@@ -37,5 +37,7 @@ class TextAdapter(val activity: BaseActivity, listener: OnAdapterListener<City>)
         v?.setOnClickListener {
             listener.onSelectedItemListener(item, position, v)
         }
+        if (position == list.size - 1) activity.goneView(v?.line1)
+        else activity.visibleView(v?.line1)
     }
 }
