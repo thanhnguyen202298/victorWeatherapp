@@ -15,16 +15,16 @@ class AppMessageLiveData(private val appMessage: AppMessage) : SingleLiveEvent<A
             var msg = error.message.toString().replace(PACKAGE_NAME, "")
             this.appMessage.messageId = if (msg.contains("400")) {
                 appMessage.code = 400
-                12
+                -1
             } else if (msg.contains("401") || msg.contains("503")) {
                 appMessage.code = if(msg.contains("401")) 401 else 503
-                45
+                -1
             } else if (msg.contains("500")) {
                 appMessage.code = 500
-                23
+                -1
             } else if (msg.contains("null")) {
                 appMessage.code = 0
-                12
+                -1
             } else AppMessage.MESS_ID_UNKNOWN
 
             this.appMessage.message = msg

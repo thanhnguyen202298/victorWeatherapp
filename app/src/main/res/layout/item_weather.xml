@@ -11,13 +11,12 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="@dimen/item_icon_width"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
         android:padding="@dimen/spacing_min4"/>
 
     <TextView
         android:id="@+id/date_title"
         android:text="@string/date_title"
-        android:textColor="@color/white"
+        android:textColor="@color/purple_700"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/img_weather"
@@ -29,7 +28,7 @@
     <TextView
         android:id="@+id/date"
         android:text="@string/date_title"
-        android:textColor="@color/white"
+        android:textColor="@color/content"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/date_title"
@@ -41,7 +40,7 @@
     <TextView
         android:id="@+id/temp_title"
         android:text="@string/temperature_title"
-        android:textColor="@color/white"
+        android:textColor="@color/purple_700"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toBottomOf="@id/date"
         app:layout_constraintStart_toEndOf="@id/img_weather"
@@ -53,7 +52,7 @@
     <TextView
         android:id="@+id/temperature"
         android:text="45"
-        android:textColor="@color/white"
+        android:textColor="@color/content"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toBottomOf="@id/date"
         app:layout_constraintStart_toEndOf="@id/temp_title"
@@ -65,7 +64,7 @@
     <TextView
         android:id="@+id/presure_title"
         android:text="@string/presure_title"
-        android:textColor="@color/white"
+        android:textColor="@color/purple_700"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toBottomOf="@id/temperature"
         app:layout_constraintStart_toEndOf="@id/img_weather"
@@ -77,7 +76,7 @@
     <TextView
         android:id="@+id/presure"
         android:text="125"
-        android:textColor="@color/white"
+        android:textColor="@color/content"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toBottomOf="@id/temperature"
         app:layout_constraintStart_toEndOf="@id/presure_title"
@@ -89,7 +88,7 @@
     <TextView
         android:id="@+id/humidity_title"
         android:text="@string/humidity_title"
-        android:textColor="@color/white"
+        android:textColor="@color/purple_700"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toBottomOf="@id/presure"
         app:layout_constraintStart_toEndOf="@id/img_weather"
@@ -101,10 +100,10 @@
     <TextView
         android:id="@+id/humidity"
         android:text="125"
-        android:textColor="@color/white"
+        android:textColor="@color/content"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toBottomOf="@id/presure"
-        app:layout_constraintStart_toEndOf="@id/presure_title"
+        app:layout_constraintStart_toEndOf="@id/humidity_title"
         android:layout_marginTop="@dimen/spacing_min2"
         android:paddingStart="@dimen/spacing_min2"
         android:layout_width="wrap_content"
@@ -113,7 +112,7 @@
     <TextView
         android:id="@+id/descript_title"
         android:text="@string/descript_title"
-        android:textColor="@color/white"
+        android:textColor="@color/purple_700"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toBottomOf="@id/humidity"
         app:layout_constraintStart_toEndOf="@id/img_weather"
@@ -125,7 +124,7 @@
     <TextView
         android:id="@+id/desc"
         android:text="acvvb"
-        android:textColor="@color/white"
+        android:textColor="@color/content"
         android:fontFamily="@font/roboto_bold"
         app:layout_constraintTop_toBottomOf="@id/humidity"
         app:layout_constraintStart_toEndOf="@id/descript_title"

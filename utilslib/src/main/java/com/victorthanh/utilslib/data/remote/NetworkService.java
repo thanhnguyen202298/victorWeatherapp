@@ -186,7 +186,7 @@ public class NetworkService {
     }
 
     private interface OpenWeather {
-        @GET("onecall")
+        @GET("onecall?units=metric")
         Observable<WeatherInfo> getWeatherBylatlon(@Query("lat") String lat, @Query("lon") String lon
                 , @Query("exclude") String exclude, @Query("appid") String keyapi);
 
@@ -194,14 +194,14 @@ public class NetworkService {
 
     /////////////////////////////// METHOD RECEIVE OBSERVABLE RESPONSE /////////////////////////////
 
-    public Observable<CityInfo> getCityInfoByName(String cityName){
+    public static Observable<CityInfo> getCityInfoByName(String cityName){
         return openData.loadCityInfo(BuildConfig.KEYAPI,cityName)
                 .compose(networkResponseTransformerCity)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-    public Observable<WeatherInfo> getWeatherBylatlon(String lat,String lon,String exclude){
+    public static Observable<WeatherInfo> getWeatherBylatlon(String lat,String lon,String exclude){
         return openWeather.getWeatherBylatlon(lat,lon,exclude,BuildConfig.APPID)
                 .compose(networkResponseTransformerWeather)
                 .subscribeOn(Schedulers.io())

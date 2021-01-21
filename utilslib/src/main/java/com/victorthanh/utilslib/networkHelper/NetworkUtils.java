@@ -14,7 +14,7 @@
  *  limitations under the License
  */
 
-package com.victorthanh.utilslib.network;
+package com.victorthanh.utilslib.networkHelper;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

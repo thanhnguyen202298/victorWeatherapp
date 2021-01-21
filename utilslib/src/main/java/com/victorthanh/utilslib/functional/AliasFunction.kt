@@ -6,3 +6,5 @@ package com.victorthanh.utilslib.functional
 typealias ProgressPosition = (Long) -> Unit
 typealias StatePlaying = (Boolean) -> Unit
 typealias CallBackVoid = () -> Boolean
+
+typealias ErrorCallBack = (Throwable) -> Unit

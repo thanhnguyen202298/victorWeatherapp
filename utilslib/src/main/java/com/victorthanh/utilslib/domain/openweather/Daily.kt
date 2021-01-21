@@ -8,6 +8,8 @@ class Daily {
     @Expose
     var dt: Int? = null
 
+    var date: String = ""
+
     @SerializedName("sunrise")
     @Expose
     var sunrise: Int? = null
@@ -62,5 +64,11 @@ class Daily {
 
     @SerializedName("uvi")
     @Expose
-    var uvi: Int? = null
+    var uvi: Double? = null
+
+    @SerializedName("visibility")
+    @Expose
+    var visibility: Int? = null
+
+
 }

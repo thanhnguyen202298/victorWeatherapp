@@ -10,7 +10,7 @@ interface OnAdapterListener<in T> {
 
     fun onBottomReachedListener(model: T, index: Int) = Unit
 
-    fun onSaveVideo(model: T, view: View?) = Unit
+    fun onSave(model: T, view: View?) = Unit
     fun onShowAttachment(model: T, view: View?) = Unit
     fun onShowEditLayout(model: T, view: View?, position: Int) = Unit
 

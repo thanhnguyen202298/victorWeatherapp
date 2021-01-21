@@ -26,5 +26,5 @@ class WeatherInfo {
 
     @SerializedName("daily")
     @Expose
-    var daily: List<Daily>? = null
+    var daily: ArrayList<Daily>? = null
 }

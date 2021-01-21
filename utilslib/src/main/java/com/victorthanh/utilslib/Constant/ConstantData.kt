@@ -6,4 +6,12 @@ const val emptyData = "--empty-block-semantic--"
 const val colorBlueLight = "BLUE"
 const val colorYellowLight = "YELLOW"
 const val colorOrangeLight = "ORANGE"
-const val IconWeatherLinkPrefix = "http://openweathermap.org/img/wn/" //iconCode@2x.png
+const val IconWeatherLinkPrefix = "http://openweathermap.org/img/wn" //iconCode@2x.png
+
+enum class ExcludeWeather(val key:String){
+    current("current"),
+    minutely("minutely"),
+    hourly("hourly"),
+    daily("daily"),
+    alerts("alerts")
+}
