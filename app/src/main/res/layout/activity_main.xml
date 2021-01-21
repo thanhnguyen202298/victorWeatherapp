@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.MainActivity">
+    tools:context=".presentation.view.MainActivity">
 
     <View
         android:id="@+id/blanktop"
@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:background="@color/transparent"
-            android:imeOptions="actionDone"
+            android:imeOptions="actionSearch"
             android:inputType="text"
             android:maxLines="1"
             />
@@ -61,5 +61,17 @@
         android:layout_marginEnd="@dimen/spacing_tiny"
         android:layout_width="match_parent"
         android:layout_height="0dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/listcity"
+        tools:listitem="@layout/item_text"
+        android:background="@drawable/bg_white_corners_bottom"
+        app:layout_constraintTop_toBottomOf="@id/btnseark"
+        app:layout_constraintEnd_toEndOf="@id/inputlayout"
+        app:layout_constraintStart_toStartOf="@id/inputlayout"
+        android:layout_marginBottom="@dimen/spacing_tiny"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

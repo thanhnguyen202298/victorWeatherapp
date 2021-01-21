@@ -14,10 +14,11 @@ import com.victorthanh.utilslib.presentation.base.event.OnAdapterListener
 import com.victorthanh.utilslib.utils.loadImage
 import com.victorthanh.utilslib.utils.loadImageBitmap
 import com.victorthanh.weather.R
-import kotlinx.android.synthetic.main.item_weather.view.*
+import com.victorthanh.weather.domain.model.City
+import kotlinx.android.synthetic.main.item_text.view.*
 
-class WeatherAdapter(val activity: BaseActivity, listener: OnAdapterListener<Daily>) :
-    BaseRecyclerAdapter<Daily>(activity,listener) {
+class TextAdapter(val activity: BaseActivity, listener: OnAdapterListener<City>) :
+    BaseRecyclerAdapter<City>(activity, listener) {
 
 
     override fun createView(
@@ -26,21 +27,15 @@ class WeatherAdapter(val activity: BaseActivity, listener: OnAdapterListener<Dai
         viewType: Int
     ): BaseViewHolder {
         val inflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = inflater.inflate(R.layout.item_weather, viewGroup, false)
+        val view = inflater.inflate(R.layout.item_text, viewGroup, false)
         return BaseViewHolder(view)
     }
 
-    override fun bindView(item: Daily?, position: Int, baseViewHolder: BaseViewHolder?) {
+    override fun bindView(item: City?, position: Int, baseViewHolder: BaseViewHolder?) {
         val v = baseViewHolder?.itemView
-        if (item?.weather?.size ?: 0 > 0) {
-            val url = item?.weather?.get(0)?.icon ?: ""
-            loadImageBitmap(activity, url, v?.img_weather!!)
+        v?.title?.text = item?.name
+        v?.setOnClickListener {
+            listener.onSelectedItemListener(item, position, v)
         }
-
-        v?.date?.text = item?.date
-        v?.temperature?.text = "${item?.temp?.day}°C"
-        v?.presure?.text = "${item?.pressure}"
-        v?.humidity?.text = "${item?.humidity}%"
-        v?.desc?.text = "${item?.weather?.get(0)?.description}"
     }
 }

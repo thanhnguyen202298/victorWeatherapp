@@ -12,7 +12,7 @@ import java.security.SecureRandom
 class RealmManager constructor(private val context: Context, private val preferences: PreferencesImp, private val keyStoreCryptorHelper: KeyStoreCryptorHelper)  {
 
     private lateinit var userRealmConfig: RealmConfiguration
-    private val REALM_DATABASE_NAME = "fuvi.realm"
+    private val REALM_DATABASE_NAME = "thanhnguyen.realm"
 
 
     fun realmInstance(): Realm = Realm.getDefaultInstance()
