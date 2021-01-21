@@ -7,10 +7,13 @@ import com.victorthanh.utilslib.BuildConfig;
 import com.victorthanh.utilslib.data.preference.PreferenceKey;
 import com.victorthanh.utilslib.data.preference.PreferencesImp;
 import com.victorthanh.utilslib.domain.model.opencage.CityInfo;
+import com.victorthanh.utilslib.domain.model.openweather.Daily;
 import com.victorthanh.utilslib.domain.model.openweather.Weather;
 import com.victorthanh.utilslib.domain.model.openweather.WeatherInfo;
+import com.victorthanh.utilslib.utils.helper.DateFormatHelper;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
@@ -28,6 +31,8 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
+
+import static com.victorthanh.utilslib.Constant.ConstantDataKt.IconWeatherLinkPrefix;
 
 public class NetworkService {
 
@@ -204,6 +209,20 @@ public class NetworkService {
     public static Observable<WeatherInfo> getWeatherBylatlon(String lat,String lon,String exclude){
         return openWeather.getWeatherBylatlon(lat,lon,exclude,BuildConfig.APPID)
                 .compose(networkResponseTransformerWeather)
+                .map(weatherInfo -> {
+                    ArrayList<Daily> ress =  weatherInfo.getDaily();
+                    int n = ress.size();
+                    for(int i = 0;i<n;i++){
+                        String date = DateFormatHelper.convertTimeUnixToDateTime(ress.get(i).getDt());
+                        if (ress.get(i).getWeather().size() > 0)
+                        {
+                            String url = String.format("%s/%s@2x.png", IconWeatherLinkPrefix, ress.get(i).getWeather().get(0).getIcon());
+                            ress.get(i).getWeather().get(0).setIcon(url);
+                        }
+                        ress.get(i).setDate(date);
+                    }
+                    return weatherInfo;
+                })
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }

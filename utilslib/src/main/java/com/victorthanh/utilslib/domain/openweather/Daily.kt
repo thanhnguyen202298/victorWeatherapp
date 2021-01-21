@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 class Daily {
     @SerializedName("dt")
     @Expose
-    var dt: Int? = null
+    var dt: Long? = null
 
     var date: String = ""
 

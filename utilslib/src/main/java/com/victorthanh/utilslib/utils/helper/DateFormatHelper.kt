@@ -389,6 +389,20 @@ object DateFormatHelper {
         return null
     }
 
+    @JvmStatic
+    fun convertTimeUnixToDateTime(timeMillisecond: Long): String? {
+        try {
+            val date = Date(timeMillisecond*1000)
+            val sdfCurrent = SimpleDateFormat("EEE, dd MMM yyyy", Locale.getDefault())
+            return sdfCurrent.format(date)
+        } catch (e: ParseException) {
+            Log.e("<<error", "Error: $e")
+        } catch (e: NullPointerException) {
+            Log.e("<<error", "Error: $e")
+        }
+        return null
+    }
+
     /***
      * Convert calendar to timestamp string "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
      * @param calendarCurrent: Calendar

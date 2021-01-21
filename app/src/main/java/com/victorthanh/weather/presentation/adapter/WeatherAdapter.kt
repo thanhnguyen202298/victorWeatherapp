@@ -16,10 +16,15 @@ import com.victorthanh.utilslib.utils.loadImageBitmap
 import com.victorthanh.weather.R
 import kotlinx.android.synthetic.main.item_weather.view.*
 
-class WeatherAdapter(val activity: BaseActivity, val listenr: OnAdapterListener<Daily>) : BaseRecyclerAdapter<Daily>(activity) {
+class WeatherAdapter(val activity: BaseActivity, val listenr: OnAdapterListener<Daily>) :
+    BaseRecyclerAdapter<Daily>(activity) {
 
 
-    override fun createView(context: Context?, viewGroup: ViewGroup?, viewType: Int): BaseViewHolder {
+    override fun createView(
+        context: Context?,
+        viewGroup: ViewGroup?,
+        viewType: Int
+    ): BaseViewHolder {
         val inflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.item_weather, viewGroup, false)
         return BaseViewHolder(view)
@@ -27,9 +32,8 @@ class WeatherAdapter(val activity: BaseActivity, val listenr: OnAdapterListener<
 
     override fun bindView(item: Daily?, position: Int, baseViewHolder: BaseViewHolder?) {
         val v = baseViewHolder?.itemView
-        if (item?.weather?.size ?: 0 > 0)
-        {
-            val url = "$IconWeatherLinkPrefix/${item?.weather?.get(0)?.icon ?: return}@2x.png"
+        if (item?.weather?.size ?: 0 > 0) {
+            val url = item?.weather?.get(0)?.icon ?: ""
             loadImageBitmap(activity, url, v?.img_weather!!)
         }
 
