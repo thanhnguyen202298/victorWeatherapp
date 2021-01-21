@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@id/btnseark"
         app:layout_constraintEnd_toEndOf="@id/inputlayout"
         app:layout_constraintStart_toStartOf="@id/inputlayout"
-        android:layout_marginBottom="@dimen/spacing_tiny"
+        android:paddingBottom="@dimen/spacing_small"
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 

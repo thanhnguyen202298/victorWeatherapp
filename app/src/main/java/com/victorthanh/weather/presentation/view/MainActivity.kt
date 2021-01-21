@@ -132,6 +132,7 @@ class MainActivity : BaseActivity() {
 
     //region event on Views
     fun onSearkBtn(v: View) {
+        hideKeyboard(cityseark)
         goneView(listcity)
         val city = cityseark.text.toString()
         viewModel.loadCityData(city)
