@@ -56,6 +56,9 @@ class MainActivity : BaseActivity() {
 
         viewModel = ViewModelProviders.of(this).get(WeatherViewModel::class.java)
 
+        viewModel.appMessage.observe(this, Observer {
+            showSnackBar(it.message,blanktop)
+        })
         viewModel.cityDetail.observe(this, Observer {
             listCitySeark = it.results
             getWeatherFromResults(it)

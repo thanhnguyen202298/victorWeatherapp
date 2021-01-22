@@ -248,7 +248,6 @@ abstract class BaseActivity : AppCompatActivity(), BaseActivityImp {
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
         if (mDoubleBackToExit) {
             super.onBackPressed()
             moveTaskToBack(true)
