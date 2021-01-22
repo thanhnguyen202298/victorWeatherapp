@@ -15,8 +15,11 @@ import com.victorthanh.utilslib.domain.model.opencage.CityInfo
 import com.victorthanh.utilslib.domain.model.opencage.Result
 import com.victorthanh.utilslib.domain.model.openweather.Daily
 import com.victorthanh.utilslib.domain.model.openweather.WeatherInfo
+import com.victorthanh.utilslib.networkHelper.NetworkUtils
 import com.victorthanh.utilslib.presentation.base.adapter.WrapGridLayoutManager
 import com.victorthanh.utilslib.presentation.base.event.OnAdapterListener
+import com.victorthanh.utilslib.presentation.component.NetworkComponent
+import com.victorthanh.utilslib.utils.helper.ConnectionHelper
 import com.victorthanh.weather.R
 import com.victorthanh.weather.domain.model.City
 import com.victorthanh.weather.presentation.adapter.TextAdapter
@@ -27,14 +30,13 @@ import io.realm.RealmResults
 import kotlinx.android.synthetic.main.activity_main.*
 import us.fuvi.utils_sdk.data.DataHelper
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity(), ConnectionHelper.ShowConnectionListener {
     private var weatherinfoAda: WeatherAdapter? = null
     private var savedCityAda: TextAdapter? = null
     private lateinit var viewModel: WeatherViewModel
     private var listCitySeark: List<Result>? = ArrayList()
     private var weatherInfo: WeatherInfo = WeatherInfo()
     private var realmInstance: Realm? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +47,12 @@ class MainActivity : BaseActivity() {
 
     override fun setupView() {
         goneView(listcity)
+        lifecycle.addObserver(
+            NetworkComponent(
+                this,
+                this
+            )
+        )
         weatherinfoAda = WeatherAdapter(this, object : OnAdapterListener<Daily> {})
         savedCityAda = TextAdapter(this, object : OnAdapterListener<City> {
             override fun onSelectedItemListener(model: City, index: Int, view: View?) {
@@ -165,5 +173,8 @@ class MainActivity : BaseActivity() {
     }
 
     override fun getActivity(screenSize: Int): AppCompatActivity = this
+    override fun onShowConnection(isConnection: Boolean) {
+        showSnackBar("No connection, plz check!",blanktop)
+    }
 
 }
